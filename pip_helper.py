@@ -15,6 +15,9 @@
       # pip list -o                   查看可升级的包
 
 """
+
+# @ERROR:  No module named 'pip._internal.cli.main'
+# 更改成 from pip._internal import main
 from pip._internal.cli.main import main
 
 pip_source = {
@@ -115,7 +118,7 @@ def install_pip_any_pages(pages=[]):
 
 
 if __name__ == '__main__':
-      down_pip_win_pages(pages=["pymongo==3.11.3"], source='官方源')
+      down_pip_win_pages(pages=["APScheduler==3.6.3"], source='官方源')
       # down_pip_any_pages(pages=["pymongo==3.11.3"], source='官方源')
       # install_pip_any_pages(pages=[])
       # install_pip_win_pages(pages=[])
